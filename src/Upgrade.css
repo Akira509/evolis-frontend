@@ -1,0 +1,106 @@
+.upgradePage {
+  background: linear-gradient(to right, #1a1a1a, #232323);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.upgradeTitle {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #00bcd4;
+}
+
+.upgradeSubtitle {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: #cccccc;
+}
+
+.planContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.planCard {
+  background-color: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.planCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
+}
+
+.planCard h2 {
+  font-size: 1.8rem;
+  color: #00bcd4;
+  margin-bottom: 0.5rem;
+}
+
+.planCard h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.planCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.planCard ul li {
+  margin: 0.5rem 0;
+}
+
+.planCard button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #00bcd4;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.planCard button:disabled {
+  background-color: #555;
+  cursor: default;
+  opacity: 0.6;
+}
+
+.planCard button:hover:not(:disabled) {
+  background-color: #00a0b0;
+}
+
+.highlight {
+  border: 2px solid #00bcd4;
+}
+
+.backBtn {
+  margin-top: 3rem;
+  padding: 0.8rem 2rem;
+  background-color: transparent;
+  border: 2px solid #00bcd4;
+  color: #00bcd4;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.backBtn:hover {
+  background-color: #00bcd4;
+  color: #1a1a1a;
+}
