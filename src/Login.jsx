@@ -15,8 +15,10 @@ const Login = () => {
     const res = await fetch(`${BASE_URL}/api/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
+      credentials: "include",
       body: JSON.stringify({ email, password }),
     });
+
 
     const data = await res.json();
     console.log("Login response:", data); 
