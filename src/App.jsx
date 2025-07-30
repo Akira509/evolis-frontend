@@ -1,4 +1,4 @@
-import './App.css'; 
+import './App.css';
 import Sidebar from "./Sidebar.jsx";
 import ChatWindow from "./ChatWindow.jsx";
 import { MyContext } from "./MyContext.jsx";
@@ -12,12 +12,22 @@ import Settings from "./Settings";
 import Upgrade from "./Upgrade";
 
 function App() {
+  console.log("App component starting to render..."); // Debug log 1
+  
   const [prompt, setPrompt] = useState("");
   const [reply, setReply] = useState(null);
-  const [currThreadId, setCurrThreadId] = useState(uuidv1());
+  
+  console.log("About to generate UUID..."); // Debug log 2
+  const [currThreadId, setCurrThreadId] = useState(() => {
+    console.log("Generating UUID..."); // Debug log 3
+    return uuidv1();
+  });
+  
   const [prevChats, setPrevChats] = useState([]);
   const [newChat, setNewChat] = useState(true);
   const [allThreads, setAllThreads] = useState([]);
+
+  console.log("App render complete, returning JSX..."); // Debug log 4
 
   const providerValues = {
     prompt, setPrompt,
